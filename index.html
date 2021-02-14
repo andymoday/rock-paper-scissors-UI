@@ -1,20 +1,27 @@
 <!DOCTYPE html>
     <head>
+        <meta charset="utf-8">
+        <title>Rock Paper Scissors</title>
+        <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
     </head>
 
-    <body style="text-align: center;">
+    <body>
         
-        <h1 id="heading" style="text-align: center;">
+        <h1 id="heading">
             ROCK PAPER SCISSORS
         </h1>
-        
-        <section id="button-row" style="display: inline-block;">
-            <button id="rock">ROCK</button>
-            <button id="paper">PAPER</button>
-            <button id="scissors">SCISSORS</button>
+        <h2 id="welcome">
+            Make your selection, friend!
+        </h2>
+        <section class="button-row">
+            <button class="button" id="rock">ROCK</button>
+            <button class="button" id="paper">PAPER</button>
+            <button class="button" id="scissors">SCISSORS</button>
         </section>
         
-        <section id="container" style="margin-top: 50px">
+        <section id="container">
         </section>
 
     </body>
@@ -84,7 +91,9 @@
         const buttons = document.querySelectorAll('button');
         const container = document.querySelector('#container');
         const result = document.createElement('div');
+        result.setAttribute('id', 'result');
         const score = document.createElement('div');
+        score.setAttribute('id', 'score');
         const endGame = document.createElement('h1');
         endGame.setAttribute('id', 'endGame');//so we can look up element to remove if it exists from a previous game
 
